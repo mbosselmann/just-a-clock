@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-function updateClock() {
+function updateClock(): string {
   const date = new Date();
   let hours = date.getHours();
   const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
   const ampm = hours >= 12 ? "PM" : "AM";
   hours = hours % 12;
   hours = hours ? hours : 12;
@@ -17,7 +16,7 @@ function updateClock() {
 
 function App() {
   const now = updateClock();
-  const [time, setTime] = useState(now);
+  const [time, setTime] = useState<string>(now);
 
   useEffect(() => {
     const tick = () => {
