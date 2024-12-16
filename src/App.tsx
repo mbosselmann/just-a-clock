@@ -12,7 +12,7 @@ function updateClock() {
 
   return `${hours.toString().padStart(2, "0")}:${minutes
     .toString()
-    .padStart(2, "0")}:${seconds.toString().padStart(2, "0")} ${ampm}`;
+    .padStart(2, "0")} ${ampm}`;
 }
 
 function App() {
@@ -25,11 +25,11 @@ function App() {
     };
 
     const now = new Date();
-    const delay = 1000 - (now.getMilliseconds() % 1000);
+    const delay = (60 - now.getSeconds()) * 1000 - now.getMilliseconds();
 
     const timeout = setTimeout(() => {
       tick();
-      setInterval(tick, 1000);
+      setInterval(tick, 60000); // Update every minute
     }, delay);
 
     return () => {

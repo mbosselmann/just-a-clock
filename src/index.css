@@ -1,11 +1,41 @@
+/* tourney-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Tourney";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/tourney-v13-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* finger-paint-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Finger Paint";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/finger-paint-v19-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+/* fredericka-the-great-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Fredericka the Great";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/fredericka-the-great-v21-latin-regular.woff2")
+    format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  --color: rgb(246, 243, 255);
+
+  font-family: Fredericka the Great, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  color: var(--color);
+  background-color: #151515;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -19,11 +49,4 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #242424;
-    background-color: #fff;
-  }
 }
