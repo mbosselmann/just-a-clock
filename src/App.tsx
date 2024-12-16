@@ -28,7 +28,7 @@ function App() {
 
     const timeout = setTimeout(() => {
       tick();
-      setInterval(tick, 60000); // Update every minute
+      setInterval(tick, 60000);
     }, delay);
 
     return () => {
